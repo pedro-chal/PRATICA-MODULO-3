@@ -90,7 +90,7 @@ foreach ($palabrasReservadas as $key => $value) {
 <div class="col-4">
 <div class="card">
    <div class="card-body">
-    <h5 class="card-title text-center text-warnings"><?php echo  $index;  ?>-<?php echo  $key;  ?></h5>
+    <h5 class="card-title text-center text-warning"><?php echo  $index;  ?>-<?php echo  $key;  ?></h5>
     <hr>
     <p class="card-text lead"><?php echo $value;  ?></p>
   </div>
