@@ -1,5 +1,5 @@
 <?php
-$palabrasReservadas= array('include_once','private','return','try','public','array()'); ?>
+$palabrasReservadas= array('include_once'=>'La sentencia include_once incluye y evalúa el fichero especificado durante la ejecución del script. Tiene un comportamiento similar al de la sentencia include, siendo la única diferencia de que si el código del fichero ya ha sido incluido, no se volverá a incluir, e include_once devolverá TRUE. Como su nombre indica, el fichero será incluido solamente una vez.','private'=>'La visibilidad de una propiedad, un método o (a partir de PHP 7.1.0) una constante se puede definir anteponiendo a su declaración una de las palabras reservadas public, protected o private. A los miembros de clase declarados como public se puede acceder desde donde sea; a los miembros declarados como protected, solo desde la misma clase o mediante clases heredadas. A los miembros declarados como private únicamente se puede acceder desde la clase que los definió.','return'=>'return devuelve el control del programa al módulo que lo invoca. La ejecución vuelve a la siguiente expresión después del módulo que lo invoca.','try'=>'PHP 5 tiene un modelo de excepciones similar al de otros lenguajes de programación. Una excepción puede ser lanzada ("thrown"), y atrapada ("catched") dentro de PHP. El código puede estar dentro de un bloque try para facilitar la captura de excepciones potenciales. Cada bloque try debe tener al menos un bloque catch o finally correspondiente.','public'=>'La visibilidad de una propiedad, un método o (a partir de PHP 7.1.0) una constante se puede definir anteponiendo a su declaración una de las palabras reservadas public, protected o private. A los miembros de clase declarados como public se puede acceder desde donde sea; a los miembros declarados como protected, solo desde la misma clase o mediante clases heredadas. A los miembros declarados como private únicamente se puede acceder desde la clase que los definió.','array()'=>'array — Crea un array'); ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -82,13 +82,17 @@ $palabrasReservadas= array('include_once','private','return','try','public','arr
 <p>Realizar lista con array en PHP que contenga mínimo 5 palabras reservadas del lenguaje y presentar en vista usando un ciclo, el componente a utilizar será un card. Organizar uno al lado de otro como tipo tabla</p>
 </div>
 <?php
+$index = 0;
 foreach ($palabrasReservadas as $key => $value) {
     # recorriendo el arra para leer las palabras reservadas
+    $index++;
 ?>
 <div class="col-4">
 <div class="card">
    <div class="card-body">
-    <h5 class="card-title text-center"><?php echo $value;  ?></h5>
+    <h5 class="card-title text-center text-warnings"><?php echo  $index;  ?>-<?php echo  $key;  ?></h5>
+    <hr>
+    <p class="card-text lead"><?php echo $value;  ?></p>
   </div>
 </div>
 </div>
